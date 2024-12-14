@@ -82,7 +82,7 @@ The following projects are included in this repository:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/STM32F446RE-Projects.git
+   git clone https://github.com/SMore1007/STM32F446RE-Projects.git
    ```
 
 2. Open **STM32CubeIDE** and import the desired project:
@@ -140,6 +140,9 @@ Contributions are welcome! To contribute:
 Please ensure that your code adheres to the coding standards and is thoroughly tested.
 
 ---
+## License
+
+All the Project demo videos I have uploaded on my Youtube channel [YouTube](https://www.youtube.com/@void_Embedded).
 
 ## License
 
@@ -147,4 +150,4 @@ This repository is licensed under the [MIT License](LICENSE). Feel free to use a
 
 ---
 
-Happy coding! If you have any questions, feel free to open an issue or contact me through [GitHub](https://github.com/yourusername).
+Happy coding! If you have any questions, feel free to open an issue or contact me through [GitHub](https://github.com/SMore1007).
