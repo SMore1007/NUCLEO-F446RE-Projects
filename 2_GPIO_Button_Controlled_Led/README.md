@@ -74,13 +74,6 @@ The implementation directly accesses hardware registers without using any extern
 
 ---
 
-## Improvements and Future Scope
-- Implement debouncing for the button to avoid multiple triggers from a single press.
-- Use a SysTick timer to introduce a delay for a more stable LED control.
-- Expand the project to include more complex input/output operations, such as using external sensors or multiple buttons.
-
----
-
 ## Contributing
 Feel free to fork this repository, submit pull requests, or suggest improvements.
 
