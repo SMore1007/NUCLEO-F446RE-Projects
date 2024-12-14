@@ -1,0 +1,68 @@
+/**
+ *
+ ******************************************************************************
+ * @file           : main.c
+ * @author         : void Embedded()
+ * @brief          : In this code  I did a Mare metal code for inbuilt LED blink on STM32F446RE nucleo board
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2024 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
+
+/*
+ * Steps for LED blink
+ * *******************************************************************
+ * 1) Enable the clock for GPIO in AHB1ENR RCC Register
+ * 2) Configure the Mode Register for GPIOA- Set to output
+ * 3) Configure the output data register for GPIOA- set to output
+ * ********************************************************************
+ *
+ * */
+
+#include <stdint.h>
+
+
+void init();
+// Enable the clock for GPIO in AHB1ENR RCC Register
+uint32_t *pRCC_AHB1ENR = (uint32_t *) 0x40023830;
+
+// Configure the Mode Register for GPIOA- Set to output
+uint32_t *pGPIOA_MODER = (uint32_t *) 0x40020000;
+
+// Configure the output data register for GPIOA- set to output
+uint32_t *pGPIOA_ODR = (uint32_t *) 0x40020014;
+
+void init()
+{
+	*pRCC_AHB1ENR |= (1 << 0); // Enable the clock for GPIOA
+	*pGPIOA_MODER |= (1 << 10); // GPIOA PA5 as Output Mode
+
+}
+void delay(uint32_t i)
+{
+	for(uint32_t t = 0; t < i; t++)
+	{
+
+	}
+}
+
+int main(void)
+{
+	init();
+	while(1)
+	{
+		*pGPIOA_ODR |= (1 << 5);
+		delay(50000);
+		*pGPIOA_ODR &= ~(1 << 5);
+		delay(50000);
+	}
+	return 0;
+}

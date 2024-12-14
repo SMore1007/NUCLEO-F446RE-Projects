@@ -1,0 +1,24 @@
+21:44:39 **** Incremental Build of configuration Debug for project 2_external_Led_Blink ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:56:11: warning: unused variable 'flag' [-Wunused-variable]
+   56 |  uint32_t flag = 0;
+      |           ^~~~
+arm-none-eabi-gcc -o "2_external_Led_Blink.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\STM32F446RE\workspace\2_external_Led_Blink\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_external_Led_Blink.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2_external_Led_Blink.elf
+ 
+arm-none-eabi-size   2_external_Led_Blink.elf 
+arm-none-eabi-objdump -h -S  2_external_Led_Blink.elf  > "2_external_Led_Blink.list"
+arm-none-eabi-objcopy  -O binary  2_external_Led_Blink.elf  "2_external_Led_Blink.bin"
+   text	   data	    bss	    dec	    hex	filename
+    848	      8	   1568	   2424	    978	2_external_Led_Blink.elf
+Finished building: default.size.stdout
+ 
+Finished building: 2_external_Led_Blink.list
+Finished building: 2_external_Led_Blink.bin
+ 
+ 
+
+21:44:42 Build Finished. 0 errors, 1 warnings. (took 2s.475ms)
+
