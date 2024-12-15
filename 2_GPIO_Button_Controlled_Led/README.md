@@ -1,4 +1,4 @@
-# STM32_Led_Button_Control
+# STM32 Button Controlled LED
 
 STM32F446RE Nucleo Board LED Control with Button
 
