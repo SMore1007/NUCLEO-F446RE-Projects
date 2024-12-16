@@ -62,8 +62,37 @@ To work with the projects in this repository, you will need:
        Now your project is ready....
      9) In the project explorer window click on your created project -> Src -> main.c
     10) In this main.c we will write our code.
-    
----
+    11) After completion of your project right click on project name and select -> build Project
+    12) if (errors > 0 && wornings > 0 )
+        {
+        Solve the errors and worning from the code 
+        }
+        else
+        {
+        right click on project name -> Debug as -> c/c++ application -> 13
+        }
+     13) In Main
+          -Project:
+             check Project name
+          - c/c++ Application
+             Check correct .elf file of your current project
+     14) In Debugger 
+         - Interface
+              Check the box ST Link S/N
+          - Enable the Serial Wire Viewer
+     15) Click On apply -> Ok
+
+     16) if(errer =  no ST link detected! Please connect ST Link.....)
+        {
+          You havn't connected the (STM32) board to your PC  -> Connect and try again
+        } else
+        {
+         You are in debug prepective mode
+        }     
+    17) if you are in debug mode go to window -> show view -> SFR
+    18) You can see the register which we are going to use in our projects and their memory address
+    19) We will define required registers and get their (32bit)memory address from SFR 
+--- 
 
 ## Project List
 
