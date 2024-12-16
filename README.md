@@ -9,6 +9,7 @@ Welcome to the **STM32F446RE Projects Repository**! This repository showcases va
 - [Introduction](#introduction)
 - [Hardware Requirements](#hardware-requirements)
 - [Software Requirements](#software-requirements)
+- [Project Creation Steps](#Project-Creation-Steps)
 - [Project List](#project-list)
 - [How to Use](#how-to-use)
 - [Folder Structure](#folder-structure)
@@ -45,7 +46,7 @@ To work with the projects in this repository, you will need:
 
 ---
 
-## HProject Creation Steps
+## Project Creation Steps
 
      1) Open the STM32Cube IDE
      2) Launch your Project specified project directory
