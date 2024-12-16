@@ -51,14 +51,15 @@ To work with the projects in this repository, you will need:
      3) Click on File->New->STM32 Project
      4) Click on Board Selector
      5) Search your board (NUCLEO-F446RE) in the commertial part number
-     6) Give your project Name
-     7) In the Options
+     6) Select the board and click on next
+     7) Give your project Name
+     8) In the Options
        - Targated language -> C
        - Targetaed Binary type -> Executable
        - Target Project type -> Empty  (As we are doing bare metal Programming)
        Now your project is ready....
-    8) In the project explorer window click on your created project -> Src -> main.c
-    9) In this main.c we will write our code.
+     9) In the project explorer window click on your created project -> Src -> main.c
+    10) In this main.c we will write our code.
     
 ---
 
