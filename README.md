@@ -45,7 +45,8 @@ To work with the projects in this repository, you will need:
 
 ---
 
-## Project Creation steps
+## HProject Creation Steps
+
      1) Open the STM32Cube IDE
      2) Launch your Project specified project directory
      3) Click on File->New->STM32 Project
