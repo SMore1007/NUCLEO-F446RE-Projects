@@ -56,26 +56,81 @@ The following projects are included in this repository:
    - Read input from a button to control an LED.
 
 3. **PWM Control for LED Brightness**
-   - Generate PWM signals for motor control or LED dimming.
+   - Objective: Learn to generate Pulse Width Modulation (PWM) signals.
+   - Focus Area: Timers and PWM peripherals.
 
-4. **UART Communication**
-   - Send and receive data using the UART protocol.
+5. **UART Communication**
+   - Objective: Interface STM32 with a PC or another microcontroller via UART.
+   - Focus Area: Serial communication.
 
-5. **I2C Communication**
-   - Interface with an I2C-based sensor.
+6. **I2C Communication with an EEPROM**
+   - Objective: Store and retrieve data using an external EEPROM.
+   - Focus Area: I2C protocol.
 
-6. **SPI Communication**
-   - Communicate with an SPI-based device.
+7. **SPI Communication with an OLED Display**
+   - Objective: Display text or graphics on an SPI OLED.
+   - Focus Area: SPI protocol and display interfacing.
 
-7. **ADC Usage**
-   - Read analog values from a potentiometer or sensor.
+8. **ADC with a Potentiometer**
+   - Objective: Read analog data using the ADC and control an LED's brightness.
+   - Focus Area: ADC peripheral.
 
-8. **Timers and Interrupts**
-   - Use timers to generate delays and handle interrupts.
+9. **Temperature Sensing with an LM35 Sensor**
+   - Objective: Measure temperature using an analog temperature sensor and display it on UART.
+   - Focus Area: ADC and real-world sensor integration.
 
-9. **Custom Project** (Advanced)
-   - A user-defined project implementing multiple features (e.g., combining ADC, UART, and PWM).
+10. **DAC for Signal Generatio**
+   - Objective: Generate a sine wave or triangular wave using the DAC.
+   - Focus Area: DAC peripheral.
 
+11. **Servo Motor Control**
+   - Objective: Control a servo motor's position using PWM.
+   - Focus Area: Timers and PWM peripherals.
+
+12. **Real-Time Clock (RTC)**
+   - Objective: Implement a real-time clock to display time on UART or an LCD.
+   - Focus Area: RTC peripheral.
+
+13. **External Interrupts with Push Buttons**
+   -Objective: Trigger an LED using external interrupts.
+   - Focus Area: External interrupt handling.
+     
+14. **DMA with ADC**
+   - Objective: Stream ADC data to memory using DMA for efficiency.
+   - Focus Area: DMA and ADC.
+
+15. **CAN Communication**
+   - Objective: Implement CAN communication between two STM32 boards.
+   - Focus Area: Controller Area Network (CAN).
+
+16. **USART with DMA**
+   - Objective: Transmit and receive data using USART with DMA.
+   - Focus Area: USART and DMA integration.
+
+17. **DAC for Signal Generation**
+   - Objective: Generate a sine wave or triangular wave using the DAC.
+   - Focus Area: DAC peripheral.
+
+18. **SD Card Data Logging**
+   - Objective: Write and read data to/from an SD card.
+   - Focus Area: File system and SDIO peripheral.
+
+19. **FreeRTOS LED Blink**
+   - Objective: Implement multitasking using FreeRTOS to blink multiple LEDs.
+   - Focus Area: Real-Time Operating Systems (RTOS).
+
+20. **Ultrasonic Sensor for Distance Measurement**
+    - Objective: Measure distance using an ultrasonic sensor and display it on UART or an OLED.
+    - Focus Area: Timers and sensor interfacing.
+
+21. **DC Motor Control Using H-Bridge**
+    - Objective: Control the direction and speed of a DC motor.
+    - Focus Area: PWM, GPIO, and motor driver circuits.
+
+22. **WiFi Communication Using ESP8266**
+    - Objective: Send data from STM32 to a server via WiFi.
+    - Focus Area: UART communication and IoT.
+    
 ---
 
 ## How to Use
