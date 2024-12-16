@@ -58,7 +58,7 @@ To work with the projects in this repository, you will need:
        - Target Project type -> Empty  (As we are doing bare metal Programming)
        Now your project is ready....
     8) In the project explorer window click on your created project -> Src -> main.c
-    9) In this main.c will will write our code.
+    9) In this main.c we will write our code.
     
 ---
 
