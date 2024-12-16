@@ -55,7 +55,7 @@ The following projects are included in this repository:
 2. **Button Controlled LED**
    - Read input from a button to control an LED.
 
-3. **PWM Signal Generation**
+3. **PWM Control for LED Brightness**
    - Generate PWM signals for motor control or LED dimming.
 
 4. **UART Communication**
