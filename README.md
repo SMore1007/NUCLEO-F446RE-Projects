@@ -45,10 +45,26 @@ To work with the projects in this repository, you will need:
 
 ---
 
+## Project Creation steps
+     1) Open the STM32Cube IDE
+     2) Launch your Project specified project directory
+     3) Click on File->New->STM32 Project
+     4) Click on Board Selector
+     5) Search your board (NUCLEO-F446RE) in the commertial part number
+     6) Give your project Name
+     7) In the Options
+       - Targated language -> C
+       - Targetaed Binary type -> Executable
+       - Target Project type -> Empty  (As we are doing bare metal Programming)
+       Now your project is ready....
+    8) In the project explorer window click on your created project -> Src -> main.c
+    9) In this main.c will will write our code.
+    
+---
+
 ## Project List
 
 The following projects will include in this repository:
-
 1. **Blink LED**
    - Basic GPIO control to toggle an LED.
 
