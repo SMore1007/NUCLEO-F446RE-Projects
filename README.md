@@ -102,36 +102,36 @@ The following projects will include in this repository:
 
 3. **Button Controlled LED**
    - Read input from a button to control an LED.
-
-4. **PWM Control for LED Brightness**
+     
+4. **UART Communication**
+   - Objective: Interface STM32 with a PC or another microcontroller via UART.
+   - Focus Area: Serial communication.
+     
+5. **PWM Control for LED Brightness**
    - Objective: Learn to generate Pulse Width Modulation (PWM) signals.
    - Focus Area: Timers and PWM peripherals.
 
-5. **UART Communication**
-   - Objective: Interface STM32 with a PC or another microcontroller via UART.
-   - Focus Area: Serial communication.
-
-7. **I2C Communication with an EEPROM**
+6. **I2C Communication with an EEPROM**
    - Objective: Store and retrieve data using an external EEPROM.
    - Focus Area: I2C protocol.
 
-8. **SPI Communication with an OLED Display**
+7. **SPI Communication with an OLED Display**
    - Objective: Display text or graphics on an SPI OLED.
    - Focus Area: SPI protocol and display interfacing.
 
-9. **ADC with a Potentiometer**
+8. **ADC with a Potentiometer**
    - Objective: Read analog data using the ADC and control an LED's brightness.
    - Focus Area: ADC peripheral.
 
-10. **Temperature Sensing with an LM35 Sensor**
+9. **Temperature Sensing with an LM35 Sensor**
     - Objective: Measure temperature using an analog temperature sensor and display it on UART.
     - Focus Area: ADC and real-world sensor integration.
 
-11. **DAC for Signal Generatio**
+10. **DAC for Signal Generatio**
     - Objective: Generate a sine wave or triangular wave using the DAC.
     - Focus Area: DAC peripheral.
 
-12. **Servo Motor Control**
+11. **Servo Motor Control**
    - Objective: Control a servo motor's position using PWM.
    - Focus Area: Timers and PWM peripherals.
 
