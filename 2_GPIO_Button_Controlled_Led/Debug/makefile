@@ -59,8 +59,8 @@ all: main-build
 main-build: 2_GPIO_Button_Controlled_Led.elf secondary-outputs
 
 # Tool invocations
-2_GPIO_Button_Controlled_Led.elf: $(OBJS) $(USER_OBJS) D:\STM32\STM32F446RE\workspace\2_external_Led_Blink\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "2_GPIO_Button_Controlled_Led.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\STM32\STM32F446RE\workspace\2_external_Led_Blink\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_GPIO_Button_Controlled_Led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+2_GPIO_Button_Controlled_Led.elf: $(OBJS) $(USER_OBJS) D:\STM32\STM32F446RE\workspace\2_GPIO_Button_Controlled_Led\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "2_GPIO_Button_Controlled_Led.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\STM32\STM32F446RE\workspace\2_GPIO_Button_Controlled_Led\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_GPIO_Button_Controlled_Led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

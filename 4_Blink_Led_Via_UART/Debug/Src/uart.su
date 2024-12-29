@@ -1,0 +1,10 @@
+uart.c:14:6:Uart2_Rx_Tx_init	8	static
+uart.c:34:6:Uart2_init	8	static
+uart.c:51:13:Set_Uart_BaudRate	24	static
+uart.c:57:17:Compute_Uart_Div	16	static
+uart.c:62:6:Uart2_Write	16	static
+uart.c:68:6:Uart2_Read	4	static
+uart.c:75:6:LED_init	4	static
+uart.c:84:6:LED_On	8	static
+uart.c:90:6:LED_Off	8	static
+uart.c:96:5:__io_putchar	16	static

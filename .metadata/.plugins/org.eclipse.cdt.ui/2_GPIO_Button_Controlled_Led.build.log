@@ -1,10 +1,23 @@
-22:35:24 **** Incremental Build of configuration Debug for project 2_GPIO_Button_Controlled_Led ****
+14:56:07 **** Build of configuration Debug for project 2_GPIO_Button_Controlled_Led ****
 make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "2_GPIO_Button_Controlled_Led.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\STM32F446RE\workspace\2_GPIO_Button_Controlled_Led\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_GPIO_Button_Controlled_Led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2_GPIO_Button_Controlled_Led.elf
+ 
 arm-none-eabi-size   2_GPIO_Button_Controlled_Led.elf 
+arm-none-eabi-objdump -h -S  2_GPIO_Button_Controlled_Led.elf  > "2_GPIO_Button_Controlled_Led.list"
+arm-none-eabi-objcopy  -O binary  2_GPIO_Button_Controlled_Led.elf  "2_GPIO_Button_Controlled_Led.bin"
    text	   data	    bss	    dec	    hex	filename
     840	      8	   1568	   2416	    970	2_GPIO_Button_Controlled_Led.elf
 Finished building: default.size.stdout
  
+Finished building: 2_GPIO_Button_Controlled_Led.list
+ 
+Finished building: 2_GPIO_Button_Controlled_Led.bin
+ 
 
-22:35:25 Build Finished. 0 errors, 0 warnings. (took 523ms)
+14:56:13 Build Finished. 0 errors, 0 warnings. (took 5s.591ms)
 

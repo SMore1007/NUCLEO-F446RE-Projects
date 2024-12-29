@@ -1,0 +1,24 @@
+00:23:11 **** Build of configuration Debug for project 4_Blink_Led_Via_UART ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"D:/STM32/STM32F446RE/workspace/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32/STM32F446RE/workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"D:/STM32/STM32F446RE/workspace/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32/STM32F446RE/workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"D:/STM32/STM32F446RE/workspace/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32/STM32F446RE/workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"D:/STM32/STM32F446RE/workspace/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/STM32/STM32F446RE/workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "4_Blink_Led_Via_UART.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\STM32F446RE\workspace\4_Blink_Led_Via_UART\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4_Blink_Led_Via_UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4_Blink_Led_Via_UART.elf
+ 
+arm-none-eabi-size   4_Blink_Led_Via_UART.elf 
+arm-none-eabi-objdump -h -S  4_Blink_Led_Via_UART.elf  > "4_Blink_Led_Via_UART.list"
+arm-none-eabi-objcopy  -O binary  4_Blink_Led_Via_UART.elf  "4_Blink_Led_Via_UART.bin"
+   text	   data	    bss	    dec	    hex	filename
+   6108	    108	   1700	   7916	   1eec	4_Blink_Led_Via_UART.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4_Blink_Led_Via_UART.bin
+Finished building: 4_Blink_Led_Via_UART.list
+ 
+ 
+
+00:23:12 Build Finished. 0 errors, 0 warnings. (took 1s.277ms)
+

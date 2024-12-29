@@ -37,13 +37,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  00000f76  00000000  00000000  000105e8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000049f  00000000  00000000  0001155e  2**0
+ 17 .debug_line   00000470  00000000  00000000  0001155e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00003c55  00000000  00000000  000119fd  2**0
+ 18 .debug_str    00003c55  00000000  00000000  000119ce  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  00015652  2**0
+ 19 .comment      00000053  00000000  00000000  00015623  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  000000a0  00000000  00000000  000156a8  2**2
+ 20 .debug_frame  000000a0  00000000  00000000  00015678  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -85,14 +85,13 @@ void delay(void);
 void init() {
  8000204:	b480      	push	{r7}
  8000206:	af00      	add	r7, sp, #0
-    // Enable clock for GPIOA by setting the corresponding bit in RCC_AHB1ENR
+    // Enable BUS clock for GPIOA by setting the corresponding bit in RCC_AHB1ENR
     *RCC_AHB1ENR |= (1 << 0);  // Set bit 0 to 1, enabling GPIOA clock
  8000208:	4b0b      	ldr	r3, [pc, #44]	; (8000238 <init+0x34>)
  800020a:	681b      	ldr	r3, [r3, #0]
  800020c:	4a0a      	ldr	r2, [pc, #40]	; (8000238 <init+0x34>)
  800020e:	f043 0301 	orr.w	r3, r3, #1
  8000212:	6013      	str	r3, [r2, #0]
-
     // Set PA5 as output mode
     *GPIOA_MODER &= ~(3 << 10); // Clear bits 10 and 11 (PA5 mode)
  8000214:	4b09      	ldr	r3, [pc, #36]	; (800023c <init+0x38>)
@@ -162,7 +161,6 @@ int main(void) {
  800027e:	6013      	str	r3, [r2, #0]
         delay();                  // Wait for some time
  8000280:	f7ff ffde 	bl	8000240 <delay>
-
         // Turn off LED by setting PA5 low
         *GPIOA_ODR &= ~(1 << 5);  // Clear bit 5 of GPIOA_ODR to 0 (LED off)
  8000284:	4b04      	ldr	r3, [pc, #16]	; (8000298 <main+0x2c>)
