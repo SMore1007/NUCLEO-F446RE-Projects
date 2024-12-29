@@ -6,9 +6,9 @@ STM32F446RE Nucleo Board LED Control Using UART Communication
 
 ## Project Overview
 
-This project demonstrates how to control an onboard LED of the STM32F446RE Nucleo board and send messages over UART communication. The LED is connected to pin PA5 (GPIO pin 5). Using UART2 configured on PA2 (TX), the board transmits a simple "Hello from STM32F446RE" message to a serial terminal.
+This project demonstrates how to control an onboard LED of the STM32F446RE Nucleo board and send messages over UART communication. The LED is connected to pin PA5 (GPIO pin 5). Using UART2 configured on PA2 (TX) and PA3(Rx), the board read the UART messages, control the LED and ransmits a simple "Led: ON" and "Led: OFF" message to a serial terminal.
 
-This implementation uses **bare-metal programming** to directly manipulate hardware registers without relying on external libraries like HAL or CMSIS. The project focuses on understanding the UART initialization and GPIO control.
+This implementation uses **bare-metal programming** to directly manipulate hardware registers without relying on external libraries like HAL. The project focuses on understanding the UART initialization and GPIO control.
 
 ---
 
@@ -32,8 +32,8 @@ This implementation uses **bare-metal programming** to directly manipulate hardw
 
 ### 1. **UART Configuration**
 - UART2 is configured with a baud rate of 115200.  
-- PA2 (USART2 TX) is set to alternate function mode for UART transmission.  
-- The alternate function type for PA2 is configured to **AF7**.  
+- PA2 (USART2 TX) and PA3 (USART2 RX) is set to alternate function mode for UART transmission.  
+- The alternate function type for PA2 and PA3 is configured to **AF7**.  
 
 ### 2. **GPIO Configuration**
 - The GPIO clock for GPIOA is enabled to access the pins.  
@@ -41,12 +41,12 @@ This implementation uses **bare-metal programming** to directly manipulate hardw
 
 ### 3. **UART Communication**
 - The UART2 peripheral is enabled by configuring the USART2 registers.  
-- A simple function, `Uart2_Write()`, transmits data byte-by-byte.  
+- A simple function, `Uart2_Write()`, transmits data byte-by-byte and Uart2_Read(), reads data byte-by-byte.  
 - The `printf` function is redirected to use the UART for message output.  
 
 ### 4. **Code Flow**
 1. Initialize UART2 and configure PA5 as output.  
-2. In an infinite loop, periodically send a message ("Hello from STM32F446RE") via UART.  
+2. In an infinite loop, periodically read the input command and control the onboard Led and send a message ("Led: ON" or "Led: OFF") via UART.  
 
 ---
 
@@ -62,11 +62,12 @@ This implementation uses **bare-metal programming** to directly manipulate hardw
 
 1. Enable the GPIOA clock for UART and LED control.  
 2. Configure PA5 as output to control the LED.  
-3. Initialize UART2 on PA2 with a baud rate of 115200.  
-4. In an infinite loop:  
-   - Transmit "Hello from STM32F446RE" via UART.  
-   - Optionally toggle the LED for visual feedback.  
-
+3. Initialize UART2 on PA2, PA3 with a baud rate of 115200.  
+4. In an infinite loop:
+   - Reads input message "ON", "OFF" via UART.
+   - Control the inbuilt Led on PA5  
+   - Transmit "Led: ON" or "Led: OFF" message via UART.
+   - 
 ---
 
 ## Key Registers Used
