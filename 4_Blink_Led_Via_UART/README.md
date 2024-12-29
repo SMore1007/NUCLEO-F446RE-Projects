@@ -22,9 +22,9 @@ This implementation uses **bare-metal programming** to directly manipulate hardw
 
 ## Software Requirements
 
-- ARM GCC toolchain or any compatible compiler  
 - STM32CubeIDE for development and debugging  
-- OpenOCD or similar flashing tool  
+- OpenOCD or similar flashing tool
+- Serial Monitor (I used Ardunio IDE)
 
 ---
 
